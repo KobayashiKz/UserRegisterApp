@@ -1,11 +1,13 @@
-package com.kk.userregisterapp.userregisterapp
+package com.kk.userregisterapp.userregisterapp.view
 
 import android.databinding.DataBindingUtil
 import android.databinding.Observable
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import com.kk.userregisterapp.userregisterapp.R
 import com.kk.userregisterapp.userregisterapp.databinding.ActivityMainBinding
+import com.kk.userregisterapp.userregisterapp.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity(), MainNavigator {
 
@@ -18,7 +20,9 @@ class MainActivity : AppCompatActivity(), MainNavigator {
         super.onCreate(savedInstanceState)
 
         if (mDataBinding == null) {
-            mDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+            mDataBinding = DataBindingUtil.setContentView(this,
+                R.layout.activity_main
+            )
         }
 
         mViewModel = MainViewModel(applicationContext).getInstance()

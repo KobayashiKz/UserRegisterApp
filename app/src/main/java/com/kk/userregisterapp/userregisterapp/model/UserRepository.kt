@@ -1,4 +1,4 @@
-package com.kk.userregisterapp.userregisterapp
+package com.kk.userregisterapp.userregisterapp.model
 
 import android.content.SharedPreferences
 

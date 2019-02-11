@@ -1,15 +1,18 @@
-package com.kk.userregisterapp.userregisterapp
+package com.kk.userregisterapp.userregisterapp.viewmodel
 
 import android.content.Context
 import android.databinding.ObservableField
 import android.text.TextUtils
+import com.kk.userregisterapp.userregisterapp.view.MainNavigator
+import com.kk.userregisterapp.userregisterapp.model.UserRepository
 
 class MainViewModel(private val mContext: Context) {
 
     private var mInstance: MainViewModel? = null
     private var mNavigator: MainNavigator? = null
 
-    private var mRepository: UserRepository = UserRepository().getInstance()
+    private var mRepository: UserRepository = UserRepository()
+        .getInstance()
 
     var mToastText: ObservableField<String> = ObservableField()
 
